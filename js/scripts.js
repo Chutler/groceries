@@ -1,31 +1,27 @@
 $(document).ready(function() {
-  $("#groceries form").submit(function(event) {
-    var items = ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive", "itemSix"];
-    console.log(items);
+  $("#blanks form").submit(function(event) {
+    var blanks = ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive", "itemSix"];
 
+    var userInputs = blanks.map(function(blank) {
+      return $("input#" + blank).val();
+    });
+
+    var groceries = userInputs.map(function(grocery) {
+      return grocery.toUpperCase();
+    })
+    
+    groceries.sort();
+    
     groceries.forEach(function(grocery) {
-     var userInput = $("input#" + blank).val();
-     $("." + blank).text(userInput);
-     });
+      $("." + 1 ).text(grocery);
+    });
+    
+    console.log(groceries)
 
-    // var upperItems = items.map(function(item) {
-    //   return item.toUpperCase();
-    //   console.log(upperItems);
-    // });
-    //
-    // var alphaItems = upperItems(sort);
-    // console.log(alphaItems);
-    // });
-    //
-    // alphaItems.forEach(function(item) {
-    //   var groceries = $("input#" + blank).val();
-    //   $("." + blank).text(userInput);
-    //
-    // });
-    //
-    // $("#results").show();
-    // $("#groceries").hide();
+    $("#results").show();
+    $("groceries").hide();
 
+    alert('Got to END of form submit!');
     event.preventDefault();
   });
 });
