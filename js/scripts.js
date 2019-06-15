@@ -11,16 +11,28 @@ $(document).ready(function() {
     })
     
     groceries.sort();
-    
-    groceries.forEach(function(grocery) {
-      $("." + 1 ).text(grocery);
-    });
-    
-    console.log(groceries)
+    console.log(groceries);
 
+    // var listOne = groceries[0];
+    // var listTwo = groceries[1];
+    // var listThree = groceries[2];
+    // var listFour = groceries[3];
+    // var listFive = groceries[4];
+    // var listSix = groceries[5];
+
+    // $(".listOne").text(listOne);
+    // $(".listTwo").text(listTwo);
+    // $(".listThree").text(listThree);
+    // $(".listFour").text(listFour);
+    // $(".listFive").text(listFive);
+    // $(".listSix").text(listSix);
+
+    
+    // console.log(groceries);
+
+    $("#blanks").hide();
     $("#results").show();
-    $("groceries").hide();
-
+    
     alert('Got to END of form submit!');
     event.preventDefault();
   });
