@@ -8,33 +8,36 @@ $(document).ready(function() {
 
     var groceries = userInputs.map(function(grocery) {
       return grocery.toUpperCase();
-    })
-    
+    });
+
     debugger;
     groceries.sort();
     console.log(groceries);
 
-    var listOne = groceries[0];
-    var listTwo = groceries[1];
-    var listThree = groceries[2];
-    var listFour = groceries[3];
-    var listFive = groceries[4];
-    var listSix = groceries[5];
+    $(".listOne").text(groceries[0]);
+    $(".listTwo").text(groceries[1]);
+    $(".listThree").text(groceries[2]);
+    $(".listFour").text(groceries[3]);
+    $(".listFive").text(groceries[4]);
+    $(".listSix").text(groceries[5]);
 
-    // $(".tony").text(listOne);
+    // var listOne = groceries[0];
+    // var listTwo = groceries[1];
+    // var listThree = groceries[2];
+    // var listFour = groceries[3];
+    // var listFive = groceries[4];
+    // var listSix = groceries[5];
+
+    // $(".listOne").text(listOne);
     // $(".listTwo").text(listTwo);
     // $(".listThree").text(listThree);
     // $(".listFour").text(listFour);
     // $(".listFive").text(listFive);
     // $(".listSix").text(listSix);
 
-    
-    // console.log(groceries);
-
     $("#blanks").hide();
     $("#results").show();
     
-    alert('Got to END of form submit!');
     event.preventDefault();
   });
 });
