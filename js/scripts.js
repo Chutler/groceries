@@ -21,20 +21,6 @@ $(document).ready(function() {
     $(".listFive").text(groceries[4]);
     $(".listSix").text(groceries[5]);
 
-    // var listOne = groceries[0];
-    // var listTwo = groceries[1];
-    // var listThree = groceries[2];
-    // var listFour = groceries[3];
-    // var listFive = groceries[4];
-    // var listSix = groceries[5];
-
-    // $(".listOne").text(listOne);
-    // $(".listTwo").text(listTwo);
-    // $(".listThree").text(listThree);
-    // $(".listFour").text(listFour);
-    // $(".listFive").text(listFive);
-    // $(".listSix").text(listSix);
-
     $("#blanks").hide();
     $("#results").show();
     
