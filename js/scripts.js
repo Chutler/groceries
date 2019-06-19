@@ -2,13 +2,20 @@ $(document).ready(function() {
   $("#blanks form").submit(function(event) {
     var blanks = ["itemOne", "itemTwo", "itemThree", "itemFour", "itemFive", "itemSix"];
 
-    var userInputs = blanks.map(function(blank) {
-      return $("input#" + blank).val();
+    var groceries = blanks.map(function(blank) {
+      return $("input#" + blank).val()
+      .toUpperCase();
     });
 
-    var groceries = userInputs.map(function(grocery) {
-      return grocery.toUpperCase();
-    });
+    console.log(groceries);
+    
+    // var userInputs = blanks.map(function(blank) {
+    //   return $("input#" + blank).val();
+    // });
+
+    // var groceries = userInputs.map(function(grocery) {
+    //   return grocery.toUpperCase();
+    // });
 
     debugger;
     groceries.sort();
